@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#2B2D42"/>
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almacenamiento Especifico"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="60dp"
+        />
+
+    <EditText
+        android:id="@+id/txt_file_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="@string/filename_value"
+        android:padding="8dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header_title"
+        android:layout_marginBottom="30dp"
+        android:background="#cbd5e1"/>
+
+
+    <EditText
+        android:id="@+id/txt_filecontent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="@string/ingredients_value"
+        android:paddingHorizontal="14dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txt_file_name"
+        android:layout_marginBottom="25dp"
+        android:background="#cbd5e1"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save_value"
+        android:layout_below="@id/txt_filecontent"
+        android:layout_marginBottom="20dp"/>
+
+
+    <ListView
+        android:id="@+id/lv_files"
+        android:layout_below="@id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>
